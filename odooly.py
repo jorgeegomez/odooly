@@ -1010,7 +1010,7 @@ class Client(object):
         except Exception:
             current_thread().dbname = self.env.db_name
             raise
-        self.env = env(context=env['res.users'].context_get())
+        self.env = env(context=None)
         return env.uid
 
     def login(self, user, password=None, database=None):
